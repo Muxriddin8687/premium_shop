@@ -19,7 +19,7 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   _htpp = inject(HttpClient);
   _fb = inject(FormBuilder);
-  title = 'Parfum';
+  title = 'Premium Shop';
   btnText = "Jo'natish";
   btnDisabled = false;
   private telegram_api = environment.telegram_api;
