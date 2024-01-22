@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --deploy-url https://muxriddin8687.github.io/premium_shop/ --base-href https://muxriddin8687.github.io/premium_shop/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
