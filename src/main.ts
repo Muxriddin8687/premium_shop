@@ -1,7 +1,17 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { importProvidersFrom } from '@angular/core';
+import { AppComponent } from './app/app.component';
+import { AppRoutingModule } from './app/app-routing.module';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 
-import { AppModule } from './app/app.module';
+const maskConfig = {
+  validation: true,
+};
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom(BrowserModule, AppRoutingModule),
+    provideEnvironmentNgxMask(maskConfig)
+  ]
+})
   .catch(err => console.error(err));
