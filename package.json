@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --deploy-url https://marvelous-praline-1dbe42.netlify.app/parfum/ --base-href https://marvelous-praline-1dbe42.netlify.app/parfum/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -44,14 +44,10 @@ export class AppComponent {
       this._htpp
         .get(`${this.telegram_api}premium1shopc&text=${data}`, { 'headers': this.headers })
         .pipe(catchError((error) => {
-          console.log(error);
-
           this.btnText = "Yana jo'natish (Aloqa yo'q!)";
           return of();
         }))
         .subscribe((res) => {
-          console.log(res);
-
           this.form.reset();
           this.btnDisabled = true;
           this.btnText = "Raxmat, tez orada operatorlarimiz siz bilan bog'lanishadi!"
