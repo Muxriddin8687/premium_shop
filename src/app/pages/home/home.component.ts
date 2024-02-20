@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgxMaskDirective, ReactiveFormsModule],
+  imports: [NgxMaskDirective, ReactiveFormsModule, HttpClientModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   providers: [provideNgxMask()],
